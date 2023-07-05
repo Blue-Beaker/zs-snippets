@@ -1,0 +1,81 @@
+{
+	"recipes3x3": {
+		"prefix": "recipes",
+		"body": [
+            "recipes.addShaped(${1:name}, ${2:outputStack},",
+            "   [input,input,input],",
+            "   [input,input,input],",
+            "   [input,input,input]]);"
+		],
+		"description": "recipe 2x2"
+	},
+	"recipes2x2": {
+		"prefix": "recipes",
+		"body": [
+            "recipes.addShaped(${1:name}, ${2:outputStack},",
+            "   [input,input],",
+            "   [input,input]]);"
+		],
+		"description": "recipe 2x2"
+	},
+    "function": {
+        "prefix": "function",
+        "body": "function ${1:name}(${2:param} as ${3:type}){$0}",
+        "description": "Function"
+    },
+    "for_list": {
+        "prefix": "for",
+        "body": ["for ${1:item} in ${2:list} {$0}"],
+        "description": "For in list"
+    },
+    "for_range": {
+        "prefix": "for",
+        "body": ["for ${1:item} in ${2:0} to ${3:10} {$0}"],
+        "description": "For in range"
+    },
+    "while": {
+        "prefix": "while",
+        "body": ["while (${1:true}) {$0}"],
+        "description": "While loop"
+    },
+    "if": {
+        "prefix": "if",
+        "body": ["if (${1:true}) {$0}"],
+        "description": "If"
+    },
+    "else": {
+        "prefix": "else",
+        "body": ["else {$0}"],
+        "description": "Else"
+    },
+    "compressor": {
+        "prefix": "mods.ic2",
+        "body": ["mods.ic2.Compressor.addRecipe(${1:IItemStack output}, ${2:IIngredient input});"],
+        "description": "IC2 Compressor"
+    },
+    "macerator": {
+        "prefix": "mods.ic2",
+        "body": ["mods.ic2.Macerator.addRecipe(${1:IItemStack output}, ${2:IIngredient input});"],
+        "description": "IC2 Macerator"
+    },
+    "extractor": {
+        "prefix": "mods.ic2",
+        "body": ["mods.ic2.Extractor.addRecipe(${1:IItemStack output}, ${2:IIngredient input});"],
+        "description": "IC2 Extractor"
+    },
+    "metal_former_cut": {
+        "prefix": "mods.ic2",
+        "body": ["mods.ic2.MetalFormer.addCuttingRecipe(${1:IItemStack output}, ${2:IIngredient input});"],
+        "description": "MetalFormer Cut"
+    },
+    "metal_former_roll": {
+        "prefix": "mods.ic2",
+        "body": ["mods.ic2.MetalFormer.addExtrudingRecipe(${1:IItemStack output}, ${2:IIngredient input});"],
+        "description": "MetalFormer Roll"
+    },
+    "metal_former_extrude": {
+        "prefix": "mods.ic2",
+        "body": ["mods.ic2.MetalFormer.addRollingRecipe(${1:IItemStack output}, ${2:IIngredient input});"],
+        "description": "MetalFormer Extrude"
+    }
+}

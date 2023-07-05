@@ -1,0 +1,20 @@
+{
+  "name": "zs-snippets",
+  "displayName": "zs-snippets",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.79.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "zenscript",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}
