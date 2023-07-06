@@ -2,7 +2,7 @@
     "recipes3x3": {
         "prefix": "recipes.addShaped",
         "body": [
-            "recipes.addShaped(${1:String name}, ${2:IItemStack outputStack},",
+            "recipes.addShaped(${1:String name}, ${2:IItemStack outputStack},[",
             "   [${3:null},${4:null},${5:null}],",
             "   [${6:null},${7:null},${8:null}],",
             "   [${9:null},${10:null},${11:null}]]);"
@@ -12,7 +12,7 @@
     "recipes2x2": {
         "prefix": "recipes.addShaped",
         "body": [
-            "recipes.addShaped(${1:String name}, ${2:IItemStack outputStack},",
+            "recipes.addShaped(${1:String name}, ${2:IItemStack outputStack},[",
             "   [${3:null},${4:null}],",
             "   [${5:null},${6:null}]]);"
         ],
@@ -48,7 +48,7 @@
     },
     "function": {
         "prefix": "function ",
-        "body": "function ${1:name}(${2:param} as ${3:type})${0}",
+        "body": "function ${1:name}(${2:param} as ${3:type}){$0}",
         "description": "Function"
     },
     "for_list": {
@@ -61,28 +61,28 @@
     "for_range": {
         "prefix": "for ",
         "body": [
-            "for ${1:item} in ${2:0} to ${3:10} ${0}"
+            "for ${1:item} in ${2:0} to ${3:10} {$0}"
         ],
         "description": "For in range"
     },
     "while": {
         "prefix": "while ",
         "body": [
-            "while (${1:true}) ${0}"
+            "while (${1:true}) {$0}"
         ],
         "description": "While loop"
     },
     "if": {
         "prefix": "if ",
         "body": [
-            "if (${1:true}) ${0}"
+            "if (${1:true}) {$0}"
         ],
         "description": "If"
     },
     "else": {
         "prefix": "else",
         "body": [
-            "else ${0}"
+            "else {$0}"
         ],
         "description": "Else"
     },
@@ -155,5 +155,19 @@
             "mods.ic2.MetalFormer.addRollingRecipe(${1:IItemStack output}, ${2:IIngredient input});"
         ],
         "description": "MetalFormer Roll"
+    },
+    "canner_bottle": {
+        "prefix": "mods.ic2.Canner.addBottleRecipe",
+        "body": [
+            "mods.ic2.Canner.addBottleRecipe(${1:IItemStack output}, ${2:IIngredient container}, ${3:IIngredient filler});"
+        ],
+        "description": "Canner Bottle"
+    },
+    "canner_enrich": {
+        "prefix": "mods.ic2.Canner.addEnrichRecipe",
+        "body": [
+            "mods.ic2.Canner.addEnrichRecipe(${1:ILiquidStack output}, ${2:ILiquidStack input}, ${3:IIngredient additive});"
+        ],
+        "description": "Canner Enrich"
     }
 }
