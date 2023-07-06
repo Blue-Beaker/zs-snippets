@@ -18,6 +18,30 @@
         ],
         "description": "recipe 2x2"
     },
+    "recipesShapeless": {
+        "prefix": "recipes.addShapeless",
+        "body": [
+            "recipes.addShapeless(${1:String name}, ${2:IItemStack outputStack},[${3:IIngredient item}]);"
+        ],
+        "description": "recipe Shapeless"
+    },
+    "recipeFunction":{
+        "prefix": "function(",
+        "body": [
+            "function(out, ins, cInfo){",
+            "   return ${1:IItemStack stack};",
+            "}"
+        ],
+        "description": "IrecipeFunction"
+    },
+    "recipeAction":{
+        "prefix": "function(",
+        "body": [
+            "function(out,cInfo,player){",
+            "}"
+        ],
+        "description": "IRecipeAction"
+    },
     "recipes_remove": {
         "prefix": "recipes.remove",
         "body": [
